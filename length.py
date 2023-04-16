@@ -9,3 +9,4 @@ def length(matriks) :
         else :
             mark = False
     return count
+

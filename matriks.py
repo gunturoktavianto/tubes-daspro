@@ -1,7 +1,4 @@
 from hitungbaris import *
-from length import *
-from Bacamatriks import *
-from summonjin import summonjin
 
 def matriks() :
     f = open('user.csv')
@@ -10,7 +7,10 @@ def matriks() :
     user = [0 for i in range(baris+1)]
     for i in range(baris) :
         cc = f.readline()
-        user[i] = cc
+        a = ''
+        for j in range(len(cc) - 1) :
+            a = a + cc[j]
+        user[i] = a
     user[baris] = ''
     f.close()
 
@@ -20,7 +20,10 @@ def matriks() :
     candi = [0 for i in range(baris+1)]
     for i in range(baris) :
         cc = f.readline()
-        candi[i] = cc
+        a = ''
+        for j in range(len(cc) - 1) :
+            a = a + cc[j]
+        candi[i] = a
     candi[baris] = ''
     f.close()
 
@@ -30,6 +33,11 @@ def matriks() :
     bahan = [0 for i in range(baris+1)]
     for i in range(baris) :
         cc = f.readline()
-        bahan[i] = cc
+        a = ''
+        for j in range(len(cc) - 1) :
+            a = a + cc[j]
+        bahan[i] = a
     bahan[baris] = ''
     f.close()
+matriks()
+
