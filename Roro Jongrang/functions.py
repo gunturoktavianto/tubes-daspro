@@ -116,3 +116,4 @@ def delete(index, matrix):
     for i in range(length(matrix)):
         if i == index:
             matrix[i] = " ; ; ; ;"
+    return matrix
