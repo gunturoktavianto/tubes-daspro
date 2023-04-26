@@ -1,12 +1,23 @@
 import random
 
+# header itu 1,2,3 untuk nama,deskripsi,jumlah
+# baris 0,1,2,3 untuk header, pasir, batu, air
+
 def kumpul():
-    pasir = random.randint(0,5)
+    pasirtotal = Bacamatriks(3, 1, bahan) # Mengambil data bahan awal di matriks
+    batutotal = Bacamatriks(3, 2, bahan)
+    airtotal = Bacamatriks(3, 3, bahan)
+
+    pasir = random.randint(0,5) # random bahan yang dikumpulkan jin
     batu = random.randint(0,5)
     air = random.randint(0,5)
-    
-    bahan[1][2] += pasir 
-    bahan[2][2] += batu
-    bahan[3][2] += air
+
+    pasirtotal = int(pasirtotal) + pasir # menjumlahkan data bahan awal dengan hasil yang dikumpulkan jin
+    batutotal = int(batutotal) + batu
+    airtotal = int(airtotal) + air
+
+    bahan[1] = f'pasir;descpasir;{pasirtotal}' # menulis ulang matriks
+    bahan[2] = f'batu;descbatu;{batutotal}'
+    bahan[3] = f'air;descair;{airtotal}'
 
     print(f"Jin menemukan {pasir} pasir, {batu} batu, dan {air} air.")
