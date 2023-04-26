@@ -1,4 +1,6 @@
 import random
+from Bacamatriks import *
+from matriks import *
 
 # header itu 1,2,3 untuk nama,deskripsi,jumlah
 # baris 0,1,2,3 untuk header, pasir, batu, air
