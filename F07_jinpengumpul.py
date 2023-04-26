@@ -6,10 +6,13 @@ from matriks import *
 # baris 0,1,2,3 untuk header, pasir, batu, air
 
 def kumpul():
+
+    global pasir, batu, air
+
     pasirtotal = Bacamatriks(3, 1, bahan) # Mengambil data bahan awal di matriks
     batutotal = Bacamatriks(3, 2, bahan)
     airtotal = Bacamatriks(3, 3, bahan)
-
+    
     pasir = random.randint(0,5) # random bahan yang dikumpulkan jin
     batu = random.randint(0,5)
     air = random.randint(0,5)
@@ -22,4 +25,5 @@ def kumpul():
     bahan[2] = f'batu;descbatu;{batutotal}'
     bahan[3] = f'air;descair;{airtotal}'
 
+def printF07() # printnya dipisah agar fungsi kumpul langsung bisa dipake f08
     print(f"Jin menemukan {pasir} pasir, {batu} batu, dan {air} air.")
