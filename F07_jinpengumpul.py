@@ -25,5 +25,5 @@ def kumpul():
     bahan[2] = f'batu;descbatu;{batutotal}'
     bahan[3] = f'air;descair;{airtotal}'
 
-def printF07() # printnya dipisah agar fungsi kumpul langsung bisa dipake f08
+def printF07(): # printnya dipisah agar fungsi kumpul langsung bisa dipake f08
     print(f"Jin menemukan {pasir} pasir, {batu} batu, dan {air} air.")
