@@ -7,7 +7,7 @@ def ubahjin() :
     jin = str(input('Masukkan username jin : '))
     indeks = 0
     mark = False
-    for i in range(length(user)) :
+    for i in range(length(user)) : # mengecek username pada matriks data
         if Bacamatriks(1 , i , user) == jin :
             mark = True
             indeks = i
@@ -16,7 +16,7 @@ def ubahjin() :
     if mark == False : 
         print('Tidak ada jin dengan username tersebut.')
     else :
-        if tipe != 'jin_pengumpul' and tipe != 'jin_pembangun' :
+        if tipe != 'jin_pengumpul' and tipe != 'jin_pembangun' : # mengecek apakah username adalah jin
           print('Tidak ada jin dengan username tersebut.')
         else :          
             if tipe == 'jin_pengumpul' :
@@ -24,9 +24,5 @@ def ubahjin() :
             else :
                 ganti = 'jin_pengumpul'
             final = str(input('Jin ini bertipe “' + tipe + '”. Yakin ingin mengubah ke tipe “' + ganti + '" (Y/N)?'))
-            if final == 'Y' or final == 'y' :
+            if final == 'Y' or final == 'y' : # tipe jin diubah
                 user[indeks] = Bacamatriks(1,indeks,user) + ';' + Bacamatriks(2,indeks,user) + ';' + ganti
-
-print(user)
-ubahjin()
-print(user)

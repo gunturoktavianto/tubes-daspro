@@ -6,15 +6,15 @@ def summonjin() :
     global user
     baris = length(user)
     count = 0
-    for i in range(baris) :
+    for i in range(baris) : # menghitung jumlah jin
         if Bacamatriks(3 , i+1 , user) == 'jin_pengumpul' or Bacamatriks(3, i+1 , user) == 'jin_pembangun' :
             count += 1
 
-    if count >= 100 :
+    if count >= 100 : # mengecek apakah sudah maksimal
         print('Jumlah Jin telah maksimal! (100 jin). Bandung tidak dapat men-summon lebih dari itu')
     else :
         jenisjin = 0
-        while jenisjin == 0 :
+        while jenisjin == 0 : # input jenis jin
             jenisjin = int(input('Masukkan nomor jenis jin yang ingin dipanggil: '))
             if jenisjin != 1 and jenisjin != 2 :
                 print('Tidak ada jenis jin bernomor "' + str(jenisjin) + '"!')
@@ -28,7 +28,7 @@ def summonjin() :
         mark = False
         while mark == False :
             username = str(input('Masukkan username jin: '))
-            for i in range(baris) :
+            for i in range(baris) : # mengecek username valid atau tidak
                 if Bacamatriks(1 , i+1 , user) == username :
                     print('Username “' + str(username) +'” sudah diambil!')
                     mark = False
@@ -38,7 +38,7 @@ def summonjin() :
         
         password = str(input('Masukkan password jin: '))
         mark = False
-        while mark == False :
+        while mark == False : # validasi password
             if len(password) >= 5 and len(password) <= 25 :
                 mark = True
             else :
@@ -55,6 +55,8 @@ def summonjin() :
             role = 'jin_pengumpul'
         else :
             role = 'jin_pembangun'
+        
+        # jin dimasukkan ke dalam matriks data
         tambahan = username + ';' + password + ';' + role
         user[baris] = tambahan
         
@@ -65,6 +67,3 @@ def summonjin() :
 
         user = temp
 
-matriks()
-summonjin()
-print(user)
