@@ -35,7 +35,7 @@ def deletecandi(index,line,candi):
 
 def hancurkancandi(candi):
     idcandi = int(input("Masukkan ID candi: "))
-    baris = hitungbaris("candi.csv")
+    baris = length(candi)
     found, indeks = inmatriks(idcandi, candi)
     if found:
         sure = input(f"Apakah anda yakin ingin menghancurkan candi ID: {idcandi} (Y/N)? ")
