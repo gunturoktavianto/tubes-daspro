@@ -1,7 +1,7 @@
 from matriks import *
 
 def inmatriks(variable, matriks): # fungsi digunakan untuk mencari indeks id yang diinginkan
-    a =[]
+    a =""
     for i in range(1,length(matriks)):
         word = ''
         for char in matriks[i]:
@@ -13,7 +13,7 @@ def inmatriks(variable, matriks): # fungsi digunakan untuk mencari indeks id yan
         if kata == str(variable): # jika id dari matriks sama dengan id yang diinginkan
             a = matriks[i] # menyimpan matriks id yang diinginkan untuk pengecekan
             indeks = i # mendapatkan indeks id yang diinginkan
-    if a != []:
+    if a != "":
         value = True # value true apabila ditemukan yakni terdapat matriks yang disimpan
     else:
         value = False 
@@ -23,7 +23,7 @@ def inmatriks(variable, matriks): # fungsi digunakan untuk mencari indeks id yan
                         # fungsi deletecandi yang menggunakan indeks sebagai parameternya
 
 def deletecandi(index,line,candi):
-    newcandi = [0 for i in range(line+1)]
+    newcandi = ["a" for i in range(line+1)]
     j = 0
     for i in range(line+1):
         if i != index:
