@@ -6,7 +6,6 @@ from hitungbaris import *
 # header itu 1,2,3 untuk nama,deskripsi,jumlah
 # baris 0,1,2,3 untuk header, pasir, batu, air
 
-def hitungjumlah()
 def kumpul():
     
     global pasir, batu, air
